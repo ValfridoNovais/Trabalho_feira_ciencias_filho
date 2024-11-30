@@ -1,11 +1,11 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from pages import grupo, historia, galeria, curiosidades, quiz
+from pages import grupo, historia, galeria, curiosidades, quiz, metodologia
 
 # Configuração inicial
 st.set_page_config(page_title="João e o Pé de Feijão", layout="wide")
 
-# CSS para organizar o menu no celular
+# CSS personalizado para organizar o menu
 st.markdown(
     """
     <style>
@@ -42,8 +42,8 @@ st.markdown(
 # Menu Superior
 selected = option_menu(
     menu_title=None,  # Oculta o título do menu
-    options=["O Grupo", "A História", "Galeria", "Curiosidades", "Quiz"],  # Opções do menu
-    icons=["people", "book", "camera", "star", "puzzle"],  # Ícones correspondentes
+    options=["O Grupo", "A História", "Galeria", "Curiosidades", "Quiz", "Metodologia"],  # Opções do menu
+    icons=["people", "book", "camera", "star", "puzzle", "tools"],  # Ícones correspondentes
     menu_icon="cast",  # Ícone geral do menu
     default_index=0,  # Abre na primeira opção por padrão
     orientation="horizontal",  # Define o menu como horizontal
@@ -65,3 +65,5 @@ elif selected == "Curiosidades":
     curiosidades.show()
 elif selected == "Quiz":
     quiz.show()
+elif selected == "Metodologia":
+    metodologia.show()
