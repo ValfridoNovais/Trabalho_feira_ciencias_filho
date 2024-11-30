@@ -47,7 +47,7 @@ def show():
             index=0  # Pré-selecionar o primeiro membro
         )
 
-    # Parte Direita: Imagem Ampliada
+    # Parte Direita Imagem Ampliada
     with col2:
         st.write("### Imagem Selecionada")
         # Encontrar o membro selecionado
