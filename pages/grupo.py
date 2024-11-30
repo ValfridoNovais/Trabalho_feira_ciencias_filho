@@ -6,11 +6,10 @@ def resize_image(image_path, max_height=200):
     Redimensiona a imagem para uma altura máxima, mantendo a proporção.
     """
     image = Image.open(image_path)
-    # Define as dimensões máximas (altura fixa, largura proporcional)
     width, height = image.size
     new_height = max_height
     new_width = int((new_height / height) * width)
-    image = image.resize((new_width, new_height))  # Sem o argumento ANTIALIAS
+    image = image.resize((new_width, new_height))  # Redimensiona mantendo a proporção
     return image
 
 def show():
@@ -24,7 +23,6 @@ def show():
     Acompanhe os talentos por trás desse incrível projeto!
     """)
 
-
     # Dados dos alunos
     members = [
         {"name": "Pedro", "img": "img/pedro1.png"},
@@ -35,30 +33,11 @@ def show():
         {"name": "Tia Gislene", "img": "img/professora.jpg"},
     ]
 
-    # Configurando as colunas
-    col1, col2 = st.columns([1, 3])  # Coluna 1 = 25%, Coluna 2 = 75%
+    # Exibir todas as imagens redimensionadas em colunas
+    st.write("### Integrantes do Grupo")
+    cols = st.columns(3)  # Configurando 3 colunas para layout
 
-    # Parte Esquerda: Miniaturas
-    with col1:
-        st.write("### Miniaturas")
-        selected_name = st.radio(
-            "Selecione um membro:",
-            [member["name"] for member in members],  # Nomes como opções
-            index=0  # Pré-selecionar o primeiro membro
-        )
-
-    # Parte Direita Imagem Ampliada
-    with col2:
-        st.write("### Imagem Selecionada")
-        # Encontrar o membro selecionado
-        selected_member = next(member for member in members if member["name"] == selected_name)
-
-        # Redimensionar a imagem selecionada
-        resized_image = resize_image(selected_member["img"], max_height=200)
-        
-        # Mostrar a imagem redimensionada
-        st.image(resized_image, caption=selected_member["name"], use_container_width=False)
-
-  
-        
-
+    for index, member in enumerate(members):
+        with cols[index % 3]:  # Distribuir imagens entre as colunas
+            resized_image = resize_image(member["img"], max_height=200)
+            st.image(resized_image, caption=member["name"], use_container_width=False)  # Exibir imagens redimensionadas
