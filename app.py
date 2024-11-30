@@ -5,6 +5,40 @@ from pages import grupo, historia, galeria, curiosidades, quiz
 # Configuração inicial
 st.set_page_config(page_title="João e o Pé de Feijão", layout="wide")
 
+# CSS para organizar o menu no celular
+st.markdown(
+    """
+    <style>
+    /* Remove a margem da barra lateral */
+    [data-testid="stSidebar"] {
+        display: none;
+    }
+    [data-testid="stAppViewContainer"] {
+        margin-left: 0;
+    }
+
+    /* Ajuste dos ícones acima do texto */
+    .css-1y4p8pa.e1fqkh3o3 > div {
+        display: flex;
+        flex-direction: column; /* Ícone em cima do texto */
+        align-items: center;    /* Centraliza os itens */
+        font-size: 12px;        /* Reduz o tamanho do texto */
+    }
+
+    /* Responsividade no celular */
+    @media screen and (max-width: 768px) {
+        .css-1y4p8pa.e1fqkh3o3 {
+            justify-content: space-around; /* Espaçamento uniforme entre itens */
+        }
+        .css-1y4p8pa.e1fqkh3o3 > div {
+            font-size: 10px; /* Reduz ainda mais o texto no celular */
+        }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Menu Superior
 selected = option_menu(
     menu_title=None,  # Oculta o título do menu
@@ -15,7 +49,7 @@ selected = option_menu(
     orientation="horizontal",  # Define o menu como horizontal
     styles={
         "container": {"background-color": "#4CAF50", "padding": "5px"},
-        "nav-link": {"font-size": "16px", "text-align": "center", "color": "white"},
+        "nav-link": {"font-size": "14px", "text-align": "center", "color": "white"},
         "nav-link-selected": {"background-color": "#45a049"},
     },
 )
