@@ -110,3 +110,7 @@ def show():
             else:
                 st.success(f"Parabéns! Você completou o quiz. Sua pontuação final é: {st.session_state.score}")
                 st.session_state.stop_quiz = True
+
+
+
+
