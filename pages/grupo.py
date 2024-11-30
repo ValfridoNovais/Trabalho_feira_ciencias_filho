@@ -16,7 +16,7 @@ def resize_image(image_path, max_height=200):
 def show():
     st.title("👥 O Grupo")
     st.write("""
-    Conheça os integrantes do grupo e a professora Luciana. 
+    Conheça os integrantes do grupo e a professora Gislene. 
     Este projeto foi desenvolvido por alunos do **5º ano do Ensino Fundamental** da **Escola Estadual de Mucuri**. 
 
     O trabalho faz parte da **Feira de Ciências, Cultura e Empreendedorismo**, onde cada grupo tem a missão de criar algo especial, utilizando criatividade, trabalho em equipe e dedicação. Nosso tema é baseado na história de **João e o Pé de Feijão**, que foi transformada em uma apresentação educativa e interativa.
@@ -29,10 +29,10 @@ def show():
     members = [
         {"name": "Pedro", "img": "img/pedro1.png"},
         {"name": "Rodrigo", "img": "img/rodrigo1.png"},
-        {"name": "Rafael", "img": "img/rafael1.png"},
+        {"name": "Rafael", "img": "img/Rafael1.png"},
         {"name": "Yong", "img": "img/yong1.png"},
         {"name": "Pietro", "img": "img/pietro1.png"},
-        {"name": "Tia Luciana", "img": "img/professora.jpg"},
+        {"name": "Tia Gislene", "img": "img/professora.jpg"},
     ]
 
     # Configurando as colunas
