@@ -26,6 +26,7 @@ def show():
         {"question": "Por que João aceitou os feijões mágicos em troca da vaca?", "options": ["Porque ele era curioso e impulsivo"], "answer": "Porque ele era curioso e impulsivo", "points": 3},
         {"question": "Como João escapou do gigante?", "options": ["Cortou o pé de feijão"], "answer": "Cortou o pé de feijão", "points": 3},
         {"question": "O que a decisão de João de trocar a vaca por feijões mágicos nos ensina?", "options": ["A importância de arriscar às vezes"], "answer": "A importância de arriscar às vezes", "points": 4},
+        {"question": "Qual é a mensagem principal da história?", "options": ["Inteligência pode superar a força"], "answer": "Inteligência pode superar a força", "points": 4},
         {"question": "Por que João dividiu a riqueza com sua mãe?", "options": ["Porque cuidar da família é importante"], "answer": "Porque cuidar da família é importante", "points": 4},
     ]
 
@@ -33,8 +34,9 @@ def show():
     filler_options = [
         "Uma galinha dourada", "Um baú de ouro", "Um castelo mágico",
         "Uma harpa mágica", "Uma árvore de maçãs", "Que dinheiro é mais importante",
-        "Porque ele queria enganar o gigante"
-    ]
+        "Porque ele queria enganar o gigante","Uma bolsa cheia de moedas", "Uma espada mágica", "Um mapa do tesouro", "Uma coroa dourada", "Um anel encantado", "Uma árvore de feijões mágicos", "Uma torre de cristal", "Uma varinha mágica", "Uma poção de invisibilidade", "Um livro de feitiços", "Um dragão adormecido", "Uma ponte para o céu", "Uma carruagem encantada", "Uma bola de cristal", "Uma flauta mágica", "Um cavalo voador", "Uma chave dourada", "Uma caverna cheia de diamantes", "Uma pulseira mágica", "Um relógio que para o tempo", "Ganância e poder", "A força física", "Os perigos da curiosidade"
+        ]
+    
 
     # Função para embaralhar perguntas e respostas
     def shuffle_questions():
