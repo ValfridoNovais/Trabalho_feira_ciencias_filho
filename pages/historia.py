@@ -1,7 +1,7 @@
 import streamlit as st
 
 def show():
-    st.title("📖 A História Completa de João e o Pé de Feijão")
+    st.title("📖 A História de João e o Pé de Feijão")
     
     st.subheader("O início da jornada")
     st.write("""
